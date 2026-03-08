@@ -7,6 +7,7 @@ export default async function handler(req, res) {
   }
 
   const { message, webhook } = req.body;
+  const { message, webhook } = req.query;
 
   if (!message || !webhook) {
     return res.status(400).send("Faltan parámetros");
